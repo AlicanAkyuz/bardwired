@@ -1,1 +1,2 @@
-export const SET_AUTH = 'SET_AUTH'
+export const TEST = 'TEST'
+export const TEST_ERR = 'TEST_ERR'

@@ -2,13 +2,13 @@ import React from 'react'
 import rootStyles from '../../../rootStyles'
 import { withStyles } from '@material-ui/core/styles'
 
-function Home({ classes }) {
+function Home({ classes, testStr }) {
   return (
     <div className={classes.container}>
       <header className={classes.header}>BardWired</header>
-      <header className={classes.subHeader}>the spectacle before us was indeed sublime</header>
-      <header className={classes.seubSubHeader}>the spectacle before us was indeed sublime</header>
-      <header className={classes.third}>the spectacle before us was indeed sublime</header>
+      <header className={classes.subHeader}>{testStr}</header>
+      <header className={classes.seubSubHeader}>{testStr}</header>
+      <header className={classes.third}>{testStr}</header>
     </div>
   )
 }

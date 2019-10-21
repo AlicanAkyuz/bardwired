@@ -1,18 +1,27 @@
 import * as types from '../actions/session/types'
 
 const initialState = {
-  isAuth: false,
-  authErr: false,
-  loading: false,
-  language: 'english'
+  testMsg: null,
+  error: {
+    testErr: false,
+    errMsg: null
+  }
 }
 
 export default function(state = initialState, { type, payload }) {
   switch (type) {
-    case types.SET_AUTH:
+    case types.TEST:
       return {
         ...state,
-        isAuth: payload
+        testMsg: payload
+      }
+    case types.TEST_ERR:
+      return {
+        ...state,
+        error: {
+          testErr: payload.bool,
+          errMsg: payload.msg
+        }
       }
     default:
       return state
